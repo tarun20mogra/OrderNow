@@ -19,7 +19,7 @@ public class BillingActivity extends AppCompatActivity {
     ListView listviewbilling ;
     double price = 0;
     Button button;
-    int i;
+    int i = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +29,7 @@ public class BillingActivity extends AppCompatActivity {
         selection = (ArrayList<FoodMenu>) intent.getSerializableExtra("selection");
         while ( i < selection.size()){
             price = price + selection.get(i).getPrice();
+            i++;
         }
 
 
