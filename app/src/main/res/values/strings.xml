@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">OrderNow</string>
+    <string name="title_activity_meu">MeuActivity</string>
+</resources>
