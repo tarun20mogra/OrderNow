@@ -47,7 +47,7 @@ public class Adapter extends ArrayAdapter<FoodMenu> {
         holder.imageView = (ImageView) convertView.findViewById(R.id.menuImage);
 
         //assigning the values to holder
-        //holder.imageView.setImageResource(menu.getImg());
+        holder.imageView.setImageResource(menu.getImg());
         holder.textViewName.setText(menu.getName());
         holder.textViewPrice.setText(""  + menu.getPrice());
 

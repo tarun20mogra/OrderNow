@@ -27,7 +27,7 @@
                 android:layout_alignParentTop="true"
                 android:padding="0dp"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/submenu" />
+                app:srcCompat="@drawable/subwaylogo" />
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -49,14 +49,14 @@
                 android:id="@+id/qdoba"
                 android:layout_width="match_parent"
 
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:onClick="menuList"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:adjustViewBounds="true"
                 android:padding="0dp"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/submenu" />
+                app:srcCompat="@drawable/qdobalogo" />
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -83,7 +83,7 @@
                 android:adjustViewBounds="true"
                 android:padding="0dp"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/submenu" />
+                app:srcCompat="@drawable/tacologo" />
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -110,7 +110,7 @@
                 android:adjustViewBounds="true"
                 android:padding="0dp"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/submenu" />
+                app:srcCompat="@drawable/starbuckslogo" />
         </android.support.v7.widget.CardView>
 
 
@@ -139,7 +139,7 @@
                 android:adjustViewBounds="true"
                 android:padding="0dp"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/submenu" />
+                app:srcCompat="@drawable/pandalogo" />
         </android.support.v7.widget.CardView>
 
 
@@ -167,7 +167,7 @@
                 android:adjustViewBounds="true"
                 android:padding="0dp"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/submenu" />
+                app:srcCompat="@drawable/carlslogo" />
         </android.support.v7.widget.CardView>
     </RelativeLayout>
 </ScrollView>
