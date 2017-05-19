@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements Serializable {
     Restaurant carlsjrobj;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         subwaybutton = (ImageButton) findViewById(R.id.subway);
@@ -87,15 +88,14 @@ public class MainActivity extends AppCompatActivity implements Serializable {
         carlsJuniorMenu.add(new FoodMenu("Famous star with cheese", 6.0D, R.drawable.fullsuperstar));
         carlsJuniorMenu.add(new FoodMenu("Super Star with Cheese", 6.0D, R.drawable.supercheese));
         carlsjrobj = new Restaurant("Starbucks", carlsJuniorMenu);
+
     }
 
 
-    void menuList(View view) {
-        String IdAsString = view.getResources().getResourceEntryName(view.getId());
-//        Toast.makeText(this, IdAsString, Toast.LENGTH_SHORT).show();
+    public void menuList(View view) {
 
-        switch (IdAsString) {
-            case "subway":
+        switch (view.getId()) {
+            case R.id.subway:
                 try {
                     Intent subintent = new Intent(this, MeuActivity.class);
                     subintent.putExtra("sampleObject", subwayObj);
@@ -104,32 +104,31 @@ public class MainActivity extends AppCompatActivity implements Serializable {
                     Toast.makeText(this, "Error Caught", Toast.LENGTH_SHORT).show();
                 }
                 break;
-            case "taco":
+            case R.id.taco:
                 Intent tacointent = new Intent(this, MeuActivity.class);
                 tacointent.putExtra("sampleObject", tacoobj);
                 startActivity(tacointent);
                 break;
-            case "starbucks":
+            case R.id.starbucks:
                 Intent starbucsintent = new Intent(this, MeuActivity.class);
                 starbucsintent.putExtra("sampleObject", starbucks);
                 startActivity(starbucsintent);
                 break;
-            case "pandaexpress":
+            case R.id.pandaexpress:
                 Intent pandaintent = new Intent(this, MeuActivity.class);
                 pandaintent.putExtra("sampleObject", pandaexpressobj);
                 startActivity(pandaintent);
                 break;
-            case "qdoba":
+            case R.id.qdoba:
                 Intent qdobaintent = new Intent(this, MeuActivity.class);
                 qdobaintent.putExtra("sampleObject", qdobaobj);
                 startActivity(qdobaintent);
                 break;
-            case "carlsjr":
+            case R.id.carlsjr:
                 Intent carlsintent = new Intent(this, MeuActivity.class);
                 carlsintent.putExtra("sampleObject", carlsjrobj);
                 startActivity(carlsintent);
                 break;
         }
-        finish();
     }
 }
